@@ -1,10 +1,6 @@
-package main.scala.kalmanovich.shai
+package kalmanovich.shai
 
-import java.io.DataInputStream
-import java.util.Scanner
-
-import kalmanovich.shai.HttpClient
-import main.scala.kalmanovich.shai.utils.Consts
+import kalmanovich.shai.utils.Consts
 import org.slf4j.{Logger, LoggerFactory}
 
 /**
@@ -17,7 +13,11 @@ object MainApp  {
   var isStop = false
 
   def main(args: Array[String]): Unit = {
-    log.info("test")
+    log.info("start")
+    if(args.length == 0){
+      log.info("Please use the first parameter as the number of clients")
+      return
+    }
 
     val numOfClients = args(0).toInt
 
@@ -27,12 +27,9 @@ object MainApp  {
       thread.start
     }
 
-
     log.info("before key stroke")
-    scala.io.StdIn.readLine() // TODO fix for any key
-    //val scanner : Scanner = new java.util.Scanner(System.in)
+    System.in.read()
     isStop = true
     log.info("finish")
   }
-
 }

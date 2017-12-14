@@ -1,6 +1,6 @@
-package test.scala.kalmanovich.shai.utils
+package scala.kalmanovich.shai.utils
 
-import main.scala.kalmanovich.shai.utils.PropertiesUtils
+import kalmanovich.shai.utils.PropertiesUtils
 import org.scalatest.FunSuite
 
 /**

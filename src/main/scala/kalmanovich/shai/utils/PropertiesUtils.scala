@@ -1,4 +1,4 @@
-package main.scala.kalmanovich.shai.utils
+package kalmanovich.shai.utils
 
 import com.typesafe.config.ConfigFactory
 
